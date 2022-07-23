@@ -1,1 +1,287 @@
-opinion
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opinion page</title>
+    <style>
+        #navbar{
+            background-color: teal;
+            height:80px;
+            display:flex;
+            justify-content: space-evenly;
+            color:white;
+            align-items: center;
+            position: Sticky;
+            top:0px;
+            width:105%;
+
+        }
+        #navbar>img{
+             margin-left:0px;
+             height:80%
+        }
+        #nav{
+            
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+            justify-content: flex-start;
+            justify-content: space-evenly;
+            font-weight: bolder;
+        }
+        #top{
+            height:40%;
+            width: 100%;
+            margin-left: 5%;
+            display:flex;
+            background-color:white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+       
+        #topl{
+             margin-top: 20px;
+             display: flex;
+             width: 60%;
+             margin-left: 5%;
+             font-weight: bolder;
+             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+      
+        #top>div>h2{
+             text-align:auto;
+             margin: 70px 10px;
+        }
+        #topl>div>p:hover{
+            font-weight:bold;
+            font-size: 12px;
+        }
+        .side>p{
+            font-weight: bolder;
+
+        }
+       
+       #top> h2{
+        height:100%;
+        margin-left: 5%;
+        background-color: darkslategray;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+      #ad{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          
+           height:40%;
+           width: 100%;
+           margin-left:5%;
+           display:flex;
+        }
+        #ad>div>h2{
+           text-align:auto;
+           margin: 70px 10px;
+           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .st>p{
+            font-weight: bolder;
+            text-align: center;
+        }
+        h2{
+            margin-left: 5%;
+        }
+        #bottom{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            margin-top: 25px;
+          
+             display: flex;
+             width: 60%;
+             margin-left: 5%;
+             font-weight: bolder;
+        }
+        #botton{
+        width:100%;
+        display:grid;
+        grid-template-rows:(2,1fr);
+        grid-template-columns: (3,1fr);
+       }
+
+
+       #botton>div{
+        height:100%;
+        width:100%;
+        background-color:plum;
+      }
+
+       #botton>div:nth-child(1){
+       
+        background-color: blue;
+        display:flex;
+        justify-content: space-evenly;
+        color:white;
+        height:auto;
+        margin-left: 5%;
+        margin-top:25px;
+       }
+        
+    </style>
+</head>
+<div>
+
+    <div id="navbar">
+        <img src="data:image/png;base64,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" alt="">
+        <div>Home</div>
+        <div>Bengaluru</div>
+        <div>Karnataka</div>
+        <div>National</div>
+        <div>sports</div>
+        <div>Business</div>
+        <div>Opinion</div>
+        <div>Features</div>
+        <div>Videos</div>
+        <div>Specials</div>
+        <div>Brandspot</div>
+    </div>
+    <div id="nav">
+        <h1>Opinion</h1>
+        <p>DH VIEWS</p>
+        <p>EDITORIALS</p>
+        <p>PANORAMA</p>
+        <p>COMMENT</p>
+        <p>IN PERSPECTIVE</p>
+        <p>RIGHT IN THE MIDDLE</p>
+    </div>
+    <div id="top">
+        <div>
+            <img src="https://www.deccanherald.com/sites/dh/files/styles/largehorizontal/public/articleimages/2022/07/23/patnaik-pti-1129328-1658569836.jpg?itok=FA5NmbOF" alt="">
+        </div>
+        <div>
+            <h2>Patnaik's nimble moves in murmu's win outwit BJP.cong</h2>
+        </div>
+        
+        <div class="side">
+
+            <img src="https://www.deccanherald.com/sites/dh/files/styles/largevertical/public/articleimages/2022/07/21/yogi-pti-1128657-1658398238.jpg?itok=KPGLDSyV" alt="">
+            <p>UP: Anger at 'double standards' against corruption bursts forth</p>
+        </div>
+    </div>
+    <div id="topl">
+        <div>
+            <img src="https://www.deccanherald.com/sites/dh/files/styles/smallvertical/public/articleimages/2022/07/22/dhnkhar-pti-1129012-1658483774.jpg?itok=CpYybBWs" alt="">
+            <p>The Dhankhar:TMC-BJP self-goal in Bengal</p>
+        </div>
+        <div>
+            <img src="https://www.deccanherald.com/sites/dh/files/styles/smallvertical/public/articleimages/2022/07/21/bidenmodi-xi-1128716-1658394614.jpg?itok=axflGnHp" alt="">
+            <p>India has to stop up engagement in the pacific...</p>
+        </div>
+        <div>
+            <img src="https://www.deccanherald.com/sites/dh/files/styles/smallvertical/public/articleimages/2022/07/21/polls-istock-1128676-1658383909.jpg?itok=RwrhTqFS" alt="">
+            <p>The Gujarat model of electioneering</p>
+        </div>
+        </div>
+        <h2>EDITORIALS</h2>
+        <div id="ad">
+            <div>
+            <img src="https://www.deccanherald.com/sites/dh/files/styles/largehorizontal/public/articleimages/2022/07/23/file7ewojvv31kx94k9dbd6-1129202-1658546684.jpg?itok=_0UyGEiN" alt="">
+            </div>
+            <div>
+            <h2>Stalling bill not a NEET thing to do</h2>
+            </div>
+            <div class="st">
+                <img src="https://www.deccanherald.com/sites/dh/files/styles/largevertical/public/articleimages/2022/07/21/file7ly4eaq1ngn1g8ey767u-1128581-1658372863.jpg?itok=syRpqPyu" alt="">
+                <p>For Lankans, Ranil is not the real deal</p>
+            </div>
+            </div>
+            <div id="bottom">
+                <div>
+                    <img src="https://www.deccanherald.com/sites/dh/files/styles/smallvertical/public/articleimages/2022/07/22/dhnkhar-pti-1129012-1658483774.jpg?itok=CpYybBWs" alt="">
+                    <p>The Dhankhar:TMC-BJP self-goal in Bengal</p>
+                </div>
+                <div>
+                    <img src="https://www.deccanherald.com/sites/dh/files/styles/smallvertical/public/articleimages/2022/07/21/bidenmodi-xi-1128716-1658394614.jpg?itok=axflGnHp" alt="">
+                    <p>India has to stop up engagement in the pacific...</p>
+                </div>
+                <div>
+                    <img src="https://www.deccanherald.com/sites/dh/files/styles/smallvertical/public/articleimages/2022/07/21/polls-istock-1128676-1658383909.jpg?itok=RwrhTqFS" alt="">
+                    <p>The Gujarat model of electioneering</p>
+                </div>
+                </div>
+                
+                <div id="botton">
+         
+                    <div>
+                    <div>
+                    <h2> NATIONAL</h2>
+                    <hr>
+                        <p>Politics</p>
+                        <p>North and Central</p>
+                        <p>South</p>
+                        <p>East and Northeast</p>
+                        <p>West</p>
+        
+                    </div>
+                    <div>
+                        <h2>kARNATAKA</h2>
+                        <hr>
+                        <p>Top Stories</p>
+                        <p>Politics</p>
+                        <p>districts</p>
+                    </div>
+        
+                    <div>
+                        <h2>BENGALURU</h2>
+                        <hr>
+                        <p>Top stories</p>
+                        <p>Bengaluru crime</p>
+                        <p>Politics</p>
+                        <p>Infrastucture</p>
+                        <p>Life in the City</p>
+                    </div>
+        
+                    <div>
+                        <h2>SPORTS</h2>
+                        <hr>
+                        <p>Cricket</p>
+                        <p>Tennis</p>
+                        <p>Football</p>
+                        <p>Sportscene</p>
+                    </div>
+        
+                   <div>
+                        <h2>BUSINESS</h2>
+                        <hr>
+                        <div>Business news</div>
+                        <div>Family Finance</div>
+                        <div>Technology</div>
+                    </div>
+        
+                    <div>
+                        <h2>MULTIMEDIA</h2>
+                        <hr>
+                        <div>Videos</div>
+                        <div>photos</div>
+                    </div>
+                    <div>
+                        <h2>OPINION</h2>
+                         <hr>
+                         <p>DH Views</p>
+                         <p>Editorials</p>
+                         <p>Panorama</p>
+                         <p>Comment</p>
+                         </div>
+                    <div>
+                        <h2>ENTERTAINMENT</h2>
+                        <hr>
+                        <p>Entertainment news</p>
+                        <p>DH showtime</p>
+                        <p>DH Talkies</p>
+                        <p>Arts,books and Culture</p>
+                    </div>
+        
+                        </div>
+        
+</div>
+  </div>
+  </body>
+  </html>
+       
+
+  
